@@ -22,7 +22,7 @@ const trueAnswer = (o, a, b) => {
   const task = `${op}, ${arg1}, ${arg2}`;
   return task;
   // const correctAnswer = trueAnswer(op, arg1, arg2);
-};*/
+}; */
 
 export const question = () => {
   const arg1 = Math.floor(Math.random() * 100);
