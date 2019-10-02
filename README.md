@@ -9,3 +9,5 @@
 # Brain-calc screencast
 [![brain-calc-screencast](https://asciinema.org/a/qItwb72rCCdDmr2GF50j5Ahk6.png)](https://asciinema.org/a/qItwb72rCCdDmr2GF50j5Ahk6)
 
+# Brain-gcd screencast
+[![brain-gcd-screencast](https://asciinema.org/a/hjwavI8dSFPzSOOEyWf2TTu86.png)](https://asciinema.org/a/hjwavI8dSFPzSOOEyWf2TTu86)
