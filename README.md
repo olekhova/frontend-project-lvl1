@@ -11,3 +11,6 @@
 
 # Brain-gcd screencast
 [![brain-gcd-screencast](https://asciinema.org/a/hjwavI8dSFPzSOOEyWf2TTu86.png)](https://asciinema.org/a/hjwavI8dSFPzSOOEyWf2TTu86)
+
+# Brain-progression screencast
+[![brain-progression-screencast](https://asciinema.org/a/9sohDVfrGsSf1AjPeb5LWYl6X.png)](https://asciinema.org/a/9sohDVfrGsSf1AjPeb5LWYl6X)

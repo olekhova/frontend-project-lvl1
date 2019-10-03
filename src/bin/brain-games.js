@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { userName, userAnswer } from '..';
-import { question, brainName } from '../games/brain-gcd';
+import { question, brainName } from '../games/brain-progression';
 
 const mainFunction = () => {
   console.log('Welcome to the Brain Games!');
