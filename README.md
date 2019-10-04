@@ -14,3 +14,6 @@
 
 # Brain-progression screencast
 [![brain-progression-screencast](https://asciinema.org/a/9sohDVfrGsSf1AjPeb5LWYl6X.png)](https://asciinema.org/a/9sohDVfrGsSf1AjPeb5LWYl6X)
+
+# Brain-prime screencast
+[![brain-prime-screencast](https://asciinema.org/a/AHm4fMQAEuzTXmSDx4iWUTY2U.png)](https://asciinema.org/a/AHm4fMQAEuzTXmSDx4iWUTY2U)
