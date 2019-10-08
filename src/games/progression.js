@@ -1,20 +1,20 @@
 export const brainName = () => 'What number is missing in the progression?';
 
-const progression = (a, x, idx, n = 10) => {
-  let r = '';
-  let v = a;
+const progression = (num, x, index, n = 10) => {
+  let pr = '';
+  let v = num;
   for (let i = 0; i <= n; i += 1) {
-    if (i === idx) {
-      r += '..';
+    if (i === index) {
+      pr += '..';
     } else {
-      r += String(v);
+      pr += String(v);
     }
     v += x;
     if (i !== n) {
-      r += ', ';
+      pr += ', ';
     }
   }
-  return r;
+  return pr;
 };
 
 export const question = () => {

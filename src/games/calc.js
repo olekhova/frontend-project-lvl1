@@ -1,4 +1,4 @@
-export const brainName = () => console.log('What is the result of the expression?');
+export const brainName = () => 'What is the result of the expression?';
 
 const trueAnswer = (o, a, b) => {
   if (o === '+') {
@@ -19,5 +19,5 @@ export const question = () => {
     return arr[randOp];
   };
   const op = arrayRandOperation();
-  return [`Question: ${arg1} ${op} ${arg2}`, trueAnswer(op, arg1, arg2)];
+  return [`Question: ${arg1} ${op} ${arg2}`, ans => Number(ans) === trueAnswer(op, arg1, arg2), trueAnswer(op, arg1, arg2)];
 };
