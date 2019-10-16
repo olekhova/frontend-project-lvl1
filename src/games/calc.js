@@ -1,23 +1,23 @@
-export const brainName = () => 'What is the result of the expression?';
+import { randomNumber, randOperation } from '../random';
 
-const trueAnswer = (o, a, b) => {
-  if (o === '+') {
-    return a + b;
-  }
-  if (o === '-') {
-    return a - b;
-  }
-  return a * b;
-};
-export const question = () => {
-  const arg1 = Math.floor(Math.random() * 100);
-  const arg2 = Math.floor(Math.random() * 100);
+const gameQuestion = 'What is the result of the expression?';
 
-  const arrayRandOperation = () => {
-    const arr = ['+', '-', '*'];
-    const randOp = Math.floor(Math.random() * arr.length);
-    return arr[randOp];
-  };
-  const op = arrayRandOperation();
-  return [`Question: ${arg1} ${op} ${arg2}`, ans => Number(ans) === trueAnswer(op, arg1, arg2), trueAnswer(op, arg1, arg2)];
+const calc = (operation, arg1, arg2) => {
+  if (operation === '+') {
+    return arg1 + arg2;
+  }
+  if (operation === '-') {
+    return arg1 - arg2;
+  }
+  return arg1 * arg2;
 };
+
+const gameCalc = () => {
+  const arg1 = randomNumber(100);
+  const arg2 = randomNumber(100);
+  const op = randOperation();
+  const answer = calc(op, arg1, arg2);
+  return [gameQuestion, `Question: ${arg1} ${op} ${arg2}`, ans => Number(ans) === answer, answer];
+};
+
+export default gameCalc();

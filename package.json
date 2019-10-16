@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Frontend project, level 1 for Hexlet 'Brain-games' ",
   "keywords": "hexlet brain-games ",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,17 +25,10 @@
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.1.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-lodash-fp": "^2.2.0-a1",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "cross-env": "^5.2.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-jest": "^22.14.1"
+    "cross-env": "^5.2.0"
   }
 }

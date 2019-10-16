@@ -1,4 +1,6 @@
-export const brainName = () => 'Answer "yes" if given number is prime. Otherwise answer "no".';
+import { randomNumber } from '../random';
+
+const gameQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   for (let i = 2; i <= num / 2; i += 1) {
@@ -7,8 +9,10 @@ const isPrime = (num) => {
   return 'yes';
 };
 
-
-export const question = () => {
-  const number = Math.floor(Math.random() * 100);
-  return [number, ans => ans === isPrime(number), isPrime(number)];
+const gamePrime = () => {
+  const num = randomNumber(100);
+  const answer = isPrime(num);
+  return [gameQuestion, `Question: ${num}`, ans => ans === answer, answer];
 };
+
+export default gamePrime();

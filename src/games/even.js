@@ -1,11 +1,11 @@
-export const brainName = () => 'Answer "yes" if number even otherwise answer "no".';
+import { randomNumber } from '../random';
 
-const trueAnswer = (x) => {
-  if ((x % 2) === 0) return 'yes';
-  return 'no';
+const gameQuestion = 'Answer "yes" if number even otherwise answer "no".';
+
+const gameEven = () => {
+  const num = randomNumber(100);
+  const answer = num % 2 === 0 ? 'yes' : 'no';
+  return [gameQuestion, `Question: ${num}`, ans => answer === ans, answer];
 };
 
-export const question = () => {
-  const number = Math.floor(Math.random() * 100);
-  return [`Question: ${number}`, ans => ans === trueAnswer(number), trueAnswer(number)];
-};
+export default gameEven();

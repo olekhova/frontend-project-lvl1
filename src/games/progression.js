@@ -1,26 +1,31 @@
-export const brainName = () => 'What number is missing in the progression?';
+import { randomNumber } from '../random';
 
-const progression = (num, x, index, n = 10) => {
-  let pr = '';
-  let v = num;
-  for (let i = 0; i <= n; i += 1) {
-    if (i === index) {
-      pr += '..';
+const gameQuestion = 'What number is missing in the progression?';
+
+const progression = (numStart, step, emptyPlace, quantity = 10) => {
+  let progr = '';
+  let numStep = numStart;
+  for (let i = 0; i <= quantity; i += 1) {
+    if (i === emptyPlace) {
+      progr += '..';
     } else {
-      pr += String(v);
+      progr += String(numStep);
     }
-    v += x;
-    if (i !== n) {
-      pr += ', ';
+    numStep += step;
+    if (i !== quantity) {
+      progr += ', ';
     }
   }
-  return pr;
+  return progr;
 };
 
-export const question = () => {
-  const start = Math.floor(Math.random() * 100);
-  const step = Math.floor(Math.random() * 10);
-  const randomIndex = Math.floor(Math.random() * 10);
-  const trueAnswer = start + step * randomIndex;
-  return [progression(start, step, randomIndex), ans => Number(ans) === trueAnswer, trueAnswer];
+const gameProgression = () => {
+  const start = randomNumber(100);
+  const step = randomNumber(10);
+  const randomIndex = randomNumber(10);
+  const answer = start + step * randomIndex;
+  return [gameQuestion, progression(start, step, randomIndex),
+    ans => Number(ans) === answer, answer];
 };
+
+export default gameProgression();

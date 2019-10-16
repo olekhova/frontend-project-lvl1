@@ -1,8 +1,10 @@
-export const brainName = () => 'Find the greatest common divisor of given numbers.';
+import { randomNumber } from '../random';
 
-const trueAnswer = (a, b) => {
-  let x = a;
-  let y = b;
+const gameQuestion = 'Find the greatest common divisor of given numbers.';
+
+const gcd = (arg1, arg2) => {
+  let x = arg1;
+  let y = arg2;
   while (x !== 0 && y !== 0) {
     if (x > y) {
       x %= y;
@@ -13,8 +15,11 @@ const trueAnswer = (a, b) => {
   return x + y;
 };
 
-export const question = () => {
-  const arg1 = Math.floor(Math.random() * 100);
-  const arg2 = Math.floor(Math.random() * 100);
-  return [`Question: ${arg1} ${arg2}`, ans => Number(ans) === trueAnswer(arg1, arg2), trueAnswer(arg1, arg2)];
+const gameGcd = () => {
+  const arg1 = randomNumber(100);
+  const arg2 = randomNumber(100);
+  const answer = gcd(arg1, arg2);
+  return [gameQuestion, `Question: ${arg1} ${arg2}`, ans => Number(ans) === answer, answer];
 };
+
+export default gameGcd();
