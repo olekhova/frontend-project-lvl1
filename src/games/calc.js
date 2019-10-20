@@ -20,4 +20,4 @@ const gameCalc = () => {
   return [gameQuestion, `Question: ${arg1} ${op} ${arg2}`, ans => Number(ans) === answer, answer];
 };
 
-export default gameCalc();
+export default gameCalc;

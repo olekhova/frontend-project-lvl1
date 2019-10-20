@@ -28,4 +28,4 @@ const gameProgression = () => {
     ans => Number(ans) === answer, answer];
 };
 
-export default gameProgression();
+export default gameProgression;

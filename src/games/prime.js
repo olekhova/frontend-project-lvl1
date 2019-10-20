@@ -15,4 +15,4 @@ const gamePrime = () => {
   return [gameQuestion, `Question: ${num}`, ans => ans === answer, answer];
 };
 
-export default gamePrime();
+export default gamePrime;

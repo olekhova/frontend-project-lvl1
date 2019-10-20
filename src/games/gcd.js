@@ -22,4 +22,4 @@ const gameGcd = () => {
   return [gameQuestion, `Question: ${arg1} ${arg2}`, ans => Number(ans) === answer, answer];
 };
 
-export default gameGcd();
+export default gameGcd;

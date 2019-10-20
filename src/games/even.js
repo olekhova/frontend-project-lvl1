@@ -8,4 +8,4 @@ const gameEven = () => {
   return [gameQuestion, `Question: ${num}`, ans => answer === ans, answer];
 };
 
-export default gameEven();
+export default gameEven;

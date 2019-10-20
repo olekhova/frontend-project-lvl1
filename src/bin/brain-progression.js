@@ -2,4 +2,4 @@
 import gameProgression from '../games/calc';
 import runGame from '../engine';
 
-runGame(gameProgression());
+runGame(gameProgression);
