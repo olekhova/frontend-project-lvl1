@@ -25,7 +25,7 @@ const gameProgression = () => {
   const randomIndex = randomNumber(10);
   const answer = start + step * randomIndex;
   return [gameQuestion, progression(start, step, randomIndex),
-    ans => Number(ans) === answer, answer];
+    (ans) => Number(ans) === answer, answer];
 };
 
 export default gameProgression;

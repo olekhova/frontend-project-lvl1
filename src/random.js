@@ -1,4 +1,4 @@
-export const randomNumber = N => Math.floor(Math.random() * N);
+export const randomNumber = (N) => Math.floor(Math.random() * N);
 
 export const randOperation = () => {
   const arr = ['+', '-', '*'];

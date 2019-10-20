@@ -12,7 +12,7 @@ const isPrime = (num) => {
 const gamePrime = () => {
   const num = randomNumber(100);
   const answer = isPrime(num);
-  return [gameQuestion, `Question: ${num}`, ans => ans === answer, answer];
+  return [gameQuestion, `Question: ${num}`, (ans) => ans === answer, answer];
 };
 
 export default gamePrime;
