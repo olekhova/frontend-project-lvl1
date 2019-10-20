@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.com/olekhova/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/olekhova/frontend-project-lvl1)
 
 # Brain-games install screencast
-[![brain-even-screencast](https://asciinema.org/a/Jz4AkuvUPTc7VwRWqOX6rGOl4.png)](https://asciinema.org/a/Jz4AkuvUPTc7VwRWqOX6rGOl4)
+[![brain-even-screencast](https://asciinema.org/a/LkGM4pCnNAThFDanVuFEJUvrd.png)](https://asciinema.org/a/LkGM4pCnNAThFDanVuFEJUvrd)
 
 # Brain-even screencast
 [![brain-even-screencast](https://asciinema.org/a/y7qr2XourYsTrmPYnC5s8GCQ0.png)](https://asciinema.org/a/y7qr2XourYsTrmPYnC5s8GCQ0)
