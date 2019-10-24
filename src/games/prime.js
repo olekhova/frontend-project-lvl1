@@ -1,18 +1,21 @@
-import { randomNumber } from '../random';
+import createRandomInteger from '../random';
+import runGame from '../engine';
 
 const gameQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   for (let i = 2; i <= num / 2; i += 1) {
-    if (num % i === 0) return 'no';
+    if (num % i === 0) return false;
   }
-  return 'yes';
+  return true;
 };
 
-const gamePrime = () => {
-  const num = randomNumber(100);
-  const answer = isPrime(num);
-  return [gameQuestion, `Question: ${num}`, (ans) => ans === answer, answer];
+const createGamePrime = () => {
+  const numberForQuestion = createRandomInteger(0, 100);
+  const correctAnswer = isPrime(numberForQuestion) ? 'yes' : 'no';
+  return [gameQuestion, numberForQuestion, correctAnswer];
 };
 
-export default gamePrime;
+const runGamePrime = () => runGame(createGamePrime);
+
+export default runGamePrime;

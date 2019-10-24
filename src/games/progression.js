@@ -1,31 +1,34 @@
-import { randomNumber } from '../random';
+import createRandomInteger from '../random';
+import runGame from '../engine';
 
 const gameQuestion = 'What number is missing in the progression?';
 
-const progression = (numStart, step, emptyPlace, quantity = 10) => {
+const constructProgression = (numStart, step, emptyPlace) => {
   let progr = '';
   let numStep = numStart;
-  for (let i = 0; i <= quantity; i += 1) {
+  const progressionLength = 10;
+  for (let i = 0; i < progressionLength; i += 1) {
     if (i === emptyPlace) {
       progr += '..';
     } else {
       progr += String(numStep);
     }
     numStep += step;
-    if (i !== quantity) {
+    if (i !== progressionLength - 1) {
       progr += ', ';
     }
   }
   return progr;
 };
 
-const gameProgression = () => {
-  const start = randomNumber(100);
-  const step = randomNumber(10);
-  const randomIndex = randomNumber(10);
-  const answer = start + step * randomIndex;
-  return [gameQuestion, progression(start, step, randomIndex),
-    (ans) => Number(ans) === answer, answer];
+const createGameProgression = () => {
+  const start = createRandomInteger(0, 100);
+  const step = createRandomInteger(0, 9);
+  const randomIndex = createRandomInteger(0, 9);
+  const correctAnswer = start + step * randomIndex;
+  return [gameQuestion, constructProgression(start, step, randomIndex), correctAnswer];
 };
 
-export default gameProgression;
+const runGameProgression = () => runGame(createGameProgression);
+
+export default runGameProgression;

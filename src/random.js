@@ -1,7 +1,3 @@
-export const randomNumber = (N) => Math.floor(Math.random() * N);
+const createRandomInteger = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-export const randOperation = () => {
-  const arr = ['+', '-', '*'];
-  const randOp = Math.floor(Math.random() * arr.length);
-  return arr[randOp];
-};
+export default createRandomInteger;

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import gameProgression from '../games/calc';
-import runGame from '../engine';
+import runGameProgression from '../games/progression';
 
-runGame(gameProgression);
+runGameProgression();
