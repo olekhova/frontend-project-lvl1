@@ -20,7 +20,9 @@ const createGameGcd = () => {
   const numberForQuestion1 = createRandomInteger(0, 100);
   const numberForQuestion2 = createRandomInteger(0, 100);
   const correctAnswer = findGcd(numberForQuestion1, numberForQuestion2);
-  return [gameQuestion, `${numberForQuestion1} ${numberForQuestion2}`, correctAnswer];
+  const textQuestion = `${numberForQuestion1} ${numberForQuestion2}`;
+  const gameGcd = [gameQuestion, textQuestion, correctAnswer];
+  return gameGcd;
 };
 
 const runGameGcd = () => runGame(createGameGcd);

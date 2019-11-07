@@ -3,22 +3,22 @@ import runGame from '../engine';
 
 const gameQuestion = 'What number is missing in the progression?';
 
-const constructProgression = (numStart, step, emptyPlace) => {
-  let progr = '';
-  let numStep = numStart;
+const constructProgression = (startNumber, step, emptyPlace) => {
+  let progression = '';
+  let stepNumber = startNumber;
   const progressionLength = 10;
   for (let i = 0; i < progressionLength; i += 1) {
     if (i === emptyPlace) {
-      progr += '..';
+      progression += '..';
     } else {
-      progr += String(numStep);
+      progression += String(stepNumber);
     }
-    numStep += step;
+    stepNumber += step;
     if (i !== progressionLength - 1) {
-      progr += ', ';
+      progression += ', ';
     }
   }
-  return progr;
+  return progression;
 };
 
 const createGameProgression = () => {
@@ -26,7 +26,9 @@ const createGameProgression = () => {
   const step = createRandomInteger(0, 9);
   const randomIndex = createRandomInteger(0, 9);
   const correctAnswer = start + step * randomIndex;
-  return [gameQuestion, constructProgression(start, step, randomIndex), correctAnswer];
+  const textProgression = constructProgression(start, step, randomIndex);
+  const gameProgression = [gameQuestion, textProgression, correctAnswer];
+  return gameProgression;
 };
 
 const runGameProgression = () => runGame(createGameProgression);

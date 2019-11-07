@@ -18,11 +18,10 @@ const runGame = (game) => {
       console.log('Correct!');
     } else {
       console.log(`${answer} is wrong answer ;(. Correct answer was  "${task[2]}". Let's try again, ${name}!`);
-      break;
-    }
-    if (i === howMany - 1) {
-      console.log(`Congratulations, ${name}!`);
+      return false;
     }
   }
+  console.log(`Congratulations, ${name}!`);
+  return true;
 };
 export default runGame;

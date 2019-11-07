@@ -13,7 +13,8 @@ const isPrime = (num) => {
 const createGamePrime = () => {
   const numberForQuestion = createRandomInteger(0, 100);
   const correctAnswer = isPrime(numberForQuestion) ? 'yes' : 'no';
-  return [gameQuestion, numberForQuestion, correctAnswer];
+  const gamePrime = [gameQuestion, numberForQuestion, correctAnswer];
+  return gamePrime;
 };
 
 const runGamePrime = () => runGame(createGamePrime);
