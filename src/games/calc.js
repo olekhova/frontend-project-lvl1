@@ -1,7 +1,7 @@
 import createRandomInteger from '../random';
 import runGame from '../engine';
 
-const gameQuestion = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
 const calculate = (operation, arg1, arg2) => {
   switch (operation) {
@@ -16,15 +16,15 @@ const calculate = (operation, arg1, arg2) => {
   }
 };
 
-const arrayOperation = ['+', '-', '*'];
+const operations = ['+', '-', '*'];
 
 const createGameCalc = () => {
-  const numberForQuestion1 = createRandomInteger(0, 100);
-  const numberForQuestion2 = createRandomInteger(0, 100);
-  const operationForQuestion = arrayOperation[createRandomInteger(0, arrayOperation.length - 1)];
-  const correctAnswer = calculate(operationForQuestion, numberForQuestion1, numberForQuestion2);
-  const textQuestion = `${numberForQuestion1} ${operationForQuestion} ${numberForQuestion2}`;
-  const gameCalc = [gameQuestion, textQuestion, correctAnswer];
+  const firstArgument = createRandomInteger(0, 100);
+  const secondArgument = createRandomInteger(0, 100);
+  const operation = operations[createRandomInteger(0, operations.length - 1)];
+  const correctAnswer = String(calculate(operation, firstArgument, secondArgument));
+  const question = `${firstArgument} ${operation} ${secondArgument}`;
+  const gameCalc = [gameDescription, question, correctAnswer];
   return gameCalc;
 };
 

@@ -1,7 +1,7 @@
 import createRandomInteger from '../random';
 import runGame from '../engine';
 
-const gameQuestion = 'Find the greatest common divisor of given numbers.';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const findGcd = (arg1, arg2) => {
   let x = arg1;
@@ -17,11 +17,11 @@ const findGcd = (arg1, arg2) => {
 };
 
 const createGameGcd = () => {
-  const numberForQuestion1 = createRandomInteger(0, 100);
-  const numberForQuestion2 = createRandomInteger(0, 100);
-  const correctAnswer = findGcd(numberForQuestion1, numberForQuestion2);
-  const textQuestion = `${numberForQuestion1} ${numberForQuestion2}`;
-  const gameGcd = [gameQuestion, textQuestion, correctAnswer];
+  const firstArgument = createRandomInteger(0, 100);
+  const secondArgument = createRandomInteger(0, 100);
+  const correctAnswer = String(findGcd(firstArgument, secondArgument));
+  const question = `${firstArgument} ${secondArgument}`;
+  const gameGcd = [gameDescription, question, correctAnswer];
   return gameGcd;
 };
 
