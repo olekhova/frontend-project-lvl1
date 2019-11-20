@@ -5,21 +5,21 @@ const gameDescription = 'What number is missing in the progression?';
 const progressionLength = 10;
 
 
-const constructProgression = (startNumber, step, emptyPlace) => {
-  let progression = '';
-  let stepNumber = startNumber;
+const buildGameQuestion = (start, step, emptyPlace) => {
+  let text = '';
+  let stepIndex = start;
   for (let i = 0; i < progressionLength; i += 1) {
     if (i === emptyPlace) {
-      progression += '..';
+      text = `${text}..`;
     } else {
-      progression += String(stepNumber);
+      text = `${text}${String(stepIndex)}`;
     }
-    stepNumber += step;
+    stepIndex += step;
     if (i !== progressionLength - 1) {
-      progression += ', ';
+      text = `${text}, `;
     }
   }
-  return progression;
+  return text;
 };
 
 const createGameProgression = () => {
@@ -27,11 +27,10 @@ const createGameProgression = () => {
   const step = createRandomInteger(0, 9);
   const randomIndex = createRandomInteger(0, progressionLength - 1);
   const correctAnswer = String(start + step * randomIndex);
-  const textProgression = constructProgression(start, step, randomIndex);
-  const gameProgression = [gameDescription, textProgression, correctAnswer];
-  return gameProgression;
+  const gameQuestion = buildGameQuestion(start, step, randomIndex);
+  return [gameQuestion, correctAnswer];
 };
 
-const runGameProgression = () => runGame(createGameProgression);
+const runGameProgression = () => runGame(gameDescription, createGameProgression);
 
 export default runGameProgression;

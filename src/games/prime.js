@@ -14,10 +14,10 @@ const isPrime = (num) => {
 const createGamePrime = () => {
   const question = createRandomInteger(0, 100);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
-  const gamePrime = [gameDescription, question, correctAnswer];
+  const gamePrime = [question, correctAnswer];
   return gamePrime;
 };
 
-const runGamePrime = () => runGame(createGamePrime);
+const runGamePrime = () => runGame(gameDescription, createGamePrime);
 
 export default runGamePrime;

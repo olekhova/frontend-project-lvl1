@@ -7,10 +7,10 @@ const isEven = (number) => number % 2 === 0;
 const createGameEven = () => {
   const question = createRandomInteger(0, 100);
   const correctAnswer = isEven(question) ? 'yes' : 'no';
-  const gameEven = [gameDescription, question, correctAnswer];
+  const gameEven = [question, correctAnswer];
   return gameEven;
 };
 
-const runGameEven = () => runGame(createGameEven);
+const runGameEven = () => runGame(gameDescription, createGameEven);
 
 export default runGameEven;

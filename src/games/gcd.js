@@ -21,10 +21,10 @@ const createGameGcd = () => {
   const secondArgument = createRandomInteger(0, 100);
   const correctAnswer = String(findGcd(firstArgument, secondArgument));
   const question = `${firstArgument} ${secondArgument}`;
-  const gameGcd = [gameDescription, question, correctAnswer];
+  const gameGcd = [question, correctAnswer];
   return gameGcd;
 };
 
-const runGameGcd = () => runGame(createGameGcd);
+const runGameGcd = () => runGame(gameDescription, createGameGcd);
 
 export default runGameGcd;

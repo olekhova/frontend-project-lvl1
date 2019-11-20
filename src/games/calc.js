@@ -12,7 +12,7 @@ const calculate = (operation, arg1, arg2) => {
     case '*':
       return arg1 * arg2;
     default:
-      return undefined;
+      return null;
   }
 };
 
@@ -24,10 +24,10 @@ const createGameCalc = () => {
   const operation = operations[createRandomInteger(0, operations.length - 1)];
   const correctAnswer = String(calculate(operation, firstArgument, secondArgument));
   const question = `${firstArgument} ${operation} ${secondArgument}`;
-  const gameCalc = [gameDescription, question, correctAnswer];
+  const gameCalc = [question, correctAnswer];
   return gameCalc;
 };
 
-const runGameCalc = () => runGame(createGameCalc);
+const runGameCalc = () => runGame(gameDescription, createGameCalc);
 
 export default runGameCalc;
