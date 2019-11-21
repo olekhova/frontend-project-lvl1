@@ -19,23 +19,19 @@
 ### Игра "Калькулятор" ("Brain-calc")
 Игроку показывается случайное математическое выражение, которое нужно вычислить и записать правильный ответ.
 
-Brain-calc screencast
 [![brain-calc-screencast](https://asciinema.org/a/WQTP34nd1ObaieNLuIqAY1gDT.png)](https://asciinema.org/a/WQTP34nd1ObaieNLuIqAY1gDT)
 
 ### Игра "Наибольший общий делитель" ("Brain-gcd")
 Игроку предлагается вычислить и ввести наибольший общий делитель двух случайных чисел.
 
-Brain-gcd screencast
 [![brain-gcd-screencast](https://asciinema.org/a/eqWp3ibxf4uoUgGFB7Cqwa3af.png)](https://asciinema.org/a/eqWp3ibxf4uoUgGFB7Cqwa3af)
 
 ### Игра "Арифметическая прогрессия" ("Brain-progression")
 Игроку показывается ряд чисел, образующий арифметическую прогрессию, но одно из чисел заменено двумя точками. Необходимо определить это число.
 
-Brain-progression screencast
 [![brain-progression-screencast](https://asciinema.org/a/bEYtOcIbCwirLuswg7CHnjL0w.png)](https://asciinema.org/a/bEYtOcIbCwirLuswg7CHnjL0w)
 
 ### Игра "Простое ли число?" ("Brain-prime")
 Игроку показывается случайное число. Надо ответить "yes", если число простое, или "no" — в противном случае.
 
-Brain-prime screencast
 [![brain-prime-screencast](https://asciinema.org/a/1OfAsSOldOX12Z3y9rKuArqSc.png)](https://asciinema.org/a/1OfAsSOldOX12Z3y9rKuArqSc)
