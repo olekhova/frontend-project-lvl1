@@ -3,15 +3,15 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 [![Build Status](https://travis-ci.com/olekhova/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/olekhova/frontend-project-lvl1)
 
-## Установка
-[![Brain-games install screencast](https://asciinema.org/a/LkGM4pCnNAThFDanVuFEJUvrd.png)](https://asciinema.org/a/LkGM4pCnNAThFDanVuFEJUvrd)
-
 ## Описание
 Набор из 5 консольных логических игр. Каждая игра состоит из трёх раундов. В каждом раунде надо ответить на однин вопрос. При правильных ответах игрок побеждает.
 
+## Установка
+[![Brain-games install screencast](https://asciinema.org/a/LkGM4pCnNAThFDanVuFEJUvrd.png)](https://asciinema.org/a/LkGM4pCnNAThFDanVuFEJUvrd)
+
 ## Описание игр
 
-**Игра "Проверка на чётность" ("Brain-even")**
+### Игра "Проверка на чётность" ("Brain-even")
 Игроку показывается случайное число. Надо ответить "yes", если число чётное, или "no" — если нечётное.
 
 [![brain-even-screencast](https://asciinema.org/a/52tl91CTHtFlVcK0oKbiR3XZa.png)](https://asciinema.org/a/52tl91CTHtFlVcK0oKbiR3XZa)
