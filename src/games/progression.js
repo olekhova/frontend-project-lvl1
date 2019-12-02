@@ -7,14 +7,7 @@ const progressionLength = 10;
 const buildGameQuestion = (start, step, emptyPlace) => {
   let resultText = '';
   for (let i = 0; i < progressionLength; i += 1) {
-    if (i === emptyPlace) {
-      resultText = `${resultText}..`;
-    } else {
-      resultText = `${resultText}${String(start + i * step)}`;
-    }
-    if (i !== progressionLength - 1) {
-      resultText = `${resultText}, `;
-    }
+    resultText = `${resultText}${i === emptyPlace ? '..' : String(start + i * step)} `;
   }
   return resultText;
 };
