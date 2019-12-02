@@ -1,6 +1,6 @@
 # @hexlet project lvl1: Brain Games
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a8bd82953a9920fe58ae/maintainability)](https://codeclimate.com/github/olekhova/frontend-project-lvl1/maintainability)
 [![Build Status](https://travis-ci.com/olekhova/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/olekhova/frontend-project-lvl1)
 
 ## Установка
