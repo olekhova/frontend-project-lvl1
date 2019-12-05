@@ -4,13 +4,13 @@ import runGame from '../engine';
 const gameDescription = 'What number is missing in the progression?';
 const progressionLength = 10;
 
-const buildGameQuestion = (start, step, emptyPlace) => {
-  let resultText = '';
-  for (let i = 0; i < progressionLength; i += 1) {
-    resultText = `${resultText}${i === emptyPlace ? '..' : String(start + i * step)}`;
-    resultText = `${resultText}${i === progressionLength - 1 ? '' : ', '}`;
+const buildGameQuestion = (start, step, emptyPlace, length) => {
+  let question = '';
+  for (let i = 0; i < length; i += 1) {
+    question = `${question}${i === emptyPlace ? '..' : start + i * step}`;
+    question = `${question}${i === length - 1 ? '' : ', '}`;
   }
-  return resultText;
+  return question;
 };
 
 const createGameProgression = () => {
@@ -18,7 +18,7 @@ const createGameProgression = () => {
   const step = createRandomInteger(0, 9);
   const hiddenMemberIndex = createRandomInteger(0, progressionLength - 1);
   const correctAnswer = String(start + step * hiddenMemberIndex);
-  const gameQuestion = buildGameQuestion(start, step, hiddenMemberIndex);
+  const gameQuestion = buildGameQuestion(start, step, hiddenMemberIndex, progressionLength);
   return [gameQuestion, correctAnswer];
 };
 
